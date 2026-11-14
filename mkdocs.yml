@@ -1,0 +1,150 @@
+site_name: AWS SAA-C03 Study Guide
+site_description: Notes, handnotes and practice questions for the AWS Certified Solutions Architect - Associate (SAA-C03) exam
+site_url: https://dlamott.github.io/aws_saa_c03_study_guide/
+repo_url: https://github.com/DLaMott/aws_saa_c03_study_guide
+docs_dir: content
+
+theme:
+  name: material
+  features:
+    - navigation.sections
+    - navigation.top
+    - navigation.indexes
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      toggle: { icon: material/weather-night, name: Dark mode }
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle: { icon: material/weather-sunny, name: Light mode }
+
+plugins:
+  - search
+  - glightbox   # click-to-zoom on the many architecture diagrams
+
+hooks:
+  - hooks/details_markdown.py
+
+exclude_docs: |
+  mcq/question_structure_prompt.md
+
+markdown_extensions:
+  - toc:
+      permalink: true
+  - tables
+  - admonition
+  - attr_list
+  - md_in_html
+  - pymdownx.superfences
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+
+nav:
+  - Home: index.md
+  - Course Notes:
+    - "1. Introduction": "notes/01_Introduction.md"
+    - "2. Preparing for the AWS Certification Exam": "notes/02_PREP.md"
+    - "3. Getting Started with AWS": "notes/03_Getting_Started_with_AWS.md"
+    - "4. IAM and AWS CLI": "notes/04_IAM_and_AWS_CLI.md"
+    - "5. EC2 Fundamentals": "notes/05_EC2_Fundamentals.md"
+    - "6. EC2 Solutions Architect Associate Level": "notes/06_EC2_SAA_Level.md"
+    - "7. EC2 Instance Storage": "notes/07_ec2_instance_storage.md"
+    - "8. High Availability And Scalability ELB & ASG": "notes/08_ELB_ASG.md"
+    - "9. AWS RDS Aurora & Elasticache": "notes/09_AWS_RDS_Aurora_Elasticache.md"
+    - "10. Route 53": "notes/10_Route_53.md"
+    - "11. Classic Solutions Architecture Discussions": "notes/11_Classic_solutions_architecture_discussions.md"
+    - "12. AWS S3 Introduction": "notes/12_AWS_S3_Intro.md"
+    - "13. AWS S3 Advance": "notes/13_AWS_S3_Advance.md"
+    - "14. AWS S3 Security": "notes/14_AWS_S3_Security.md"
+    - "15. Cloudfront & AWS Global Accelerator": "notes/15_cloudfront_and_aws_global_accelerator.md"
+    - "16. AWS Storage Extras": "notes/16_aws_storage_extras_combined.md"
+    - "17. AWS Integration & Messaging: Decoupling Applications SQS, SNA, Kinesis, Active MQ": "notes/17_AWS_Integration_and_Messaging.md"
+    - "18. Containers On AWS ECS Fargate, ECR & EKS": "notes/18_containers_on_aws_ecs,_fargate,_ecr_&_eks_combined.md"
+    - "19. Serverless Overviews From A Solution Architect Perspective": "notes/19_serverless_overviews_from_a_solution_architect_perspective_combined.md"
+    - "20. Serverless Solution Architecture Discussions": "notes/20_serverless_solution_architecture_discussions_combined.md"
+    - "21. Databases In Aws": "notes/21_databases_in_aws_combined.md"
+    - "22. Data & Analytics": "notes/22_data_&_analytics_combined.md"
+    - "23. Machine Learning": "notes/23_machine_learning_combined.md"
+    - "24. AWS Monitoring & Audit Cloudwatch, Cloudtrail & Config": "notes/24_aws_monitoring_&_audit_cloudwatch,_cloudtrail_&_config_combined.md"
+    - "25. Identity And Access Management (Iam) - Advanced": "notes/25_identity_and_access_management_(iam)___advanced_combined.md"
+    - "26. AWS Security & Encryption KMS, SSM Parameter Store, Shield, WAF": "notes/26_aws_security_&_encryption_kms,_ssm_parameter_store,_shield,_waf_combined.md"
+    - "27. Networking - VPC": "notes/27_networking___vpc_combined.md"
+    - "28. Disaster Recovery & Migrations": "notes/28_disaster_recovery_&_migrations_combined.md"
+    - "29. More Solution Architectures": "notes/29_more_solution_architectures_combined.md"
+    - "30. Other Services": "notes/30_other_services_combined.md"
+    - "31. Whitepapers And Architectures   Aws Certified Solutions Architect Associate": "notes/31_whitepapers_and_architectures___aws_certified_solutions_architect_associate_combined.md"
+    - "32. Key Matches & Short Notes": "notes/32_Key_Matches.md"
+  - Short Handnotes:
+    - "0. service key mappings": "handnotes/00_service_key_mappings_handnote.md"
+    - "1. Introduction": "handnotes/01_Introduction_handnote.md"
+    - "2. PREP": "handnotes/02_PREP_handnote.md"
+    - "3. Getting Started with AWS": "handnotes/03_Getting_Started_with_AWS_handnote.md"
+    - "4. IAM and AWS CLI": "handnotes/04_IAM_and_AWS_CLI_handnote.md"
+    - "5. EC2 Fundamentals": "handnotes/05_EC2_Fundamentals_handnote.md"
+    - "6. EC2 SAA Level": "handnotes/06_EC2_SAA_Level_handnote.md"
+    - "7. ec2 instance storage": "handnotes/07_ec2_instance_storage_handnote.md"
+    - "8. elb asg": "handnotes/08_elb_asg_handnote.md"
+    - "9. AWS RDS Aurora Elasticache": "handnotes/09_AWS_RDS_Aurora_Elasticache_handnote.md"
+    - "10. Route 53": "handnotes/10_Route_53_handnote.md"
+    - "11. Classic solutions architecture discussions": "handnotes/11_Classic_solutions_architecture_discussions_handnote.md"
+    - "12. AWS S3": "handnotes/12_AWS_S3_handnote.md"
+    - "15. cloudfront and aws global accelerator": "handnotes/15_cloudfront_and_aws_global_accelerator_handnote.md"
+    - "16. aws storage extras combined": "handnotes/16_aws_storage_extras_combined_handnote.md"
+    - "17. AWS Integration and Messaging": "handnotes/17_AWS_Integration_and_Messaging_handnote.md"
+    - "18. containers on aws ecs, fargate, ecr & eks combined": "handnotes/18_containers_on_aws_ecs,_fargate,_ecr_&_eks_combined_handnote.md"
+    - "19. serverless overviews from a solution architect perspective combined": "handnotes/19_serverless_overviews_from_a_solution_architect_perspective_combined_handnote.md"
+    - "20. serverless solution architecture discussions combined": "handnotes/20_serverless_solution_architecture_discussions_combined_handnote.md"
+    - "21. databases in aws combined": "handnotes/21_databases_in_aws_combined_handnote.md"
+    - "22. data & analytics combined": "handnotes/22_data_&_analytics_combined_handnote.md"
+    - "23. machine learning combined": "handnotes/23_machine_learning_combined_handnote.md"
+    - "24. aws monitoring & audit cloudwatch, cloudtrail & config combined": "handnotes/24_aws_monitoring_&_audit_cloudwatch,_cloudtrail_&_config_combined_handnote.md"
+    - "25. identity and access management (iam)   advanced combined": "handnotes/25_identity_and_access_management_(iam)___advanced_combined_handnote.md"
+    - "26. aws security & encryption kms, ssm parameter store, shield, waf combined": "handnotes/26_aws_security_&_encryption_kms,_ssm_parameter_store,_shield,_waf_combined_handnote.md"
+    - "27. networking   vpc combined": "handnotes/27_networking___vpc_combined_handnote.md"
+    - "28. disaster recovery & migrations combined": "handnotes/28_disaster_recovery_&_migrations_combined_handnote.md"
+    - "29. more solution architectures combined": "handnotes/29_more_solution_architectures_combined_handnote.md"
+    - "30. other services combined": "handnotes/30_other_services_combined_handnote.md"
+    - "31. whitepapers and architectures   aws certified solutions architect associate combined": "handnotes/31_whitepapers_and_architectures___aws_certified_solutions_architect_associate_combined_handnote.md"
+  - Well-Architected Framework:
+    - "1. AWS WA Framework Overview": "waf/1_AWS_WA_Framework_Overview.md"
+    - "2. how to run a well architected framework review": "waf/2_how_to_run_a_well_architected_framework_review.md"
+    - "3. deep dive on the aws well architected tool": "waf/3_deep_dive_on_the_aws_well_architected_tool.md"
+    - "4. operational excellence pillar": "waf/4_operational_excellence_pillar.md"
+    - "5. security piller": "waf/5_security_piller.md"
+    - "6. reliability pillar": "waf/6_reliability_pillar.md"
+    - "7. Performance Efficiency Piller": "waf/7_Performance_Efficiency_Piller.md"
+    - "8. Cost Optimization Pillar": "waf/8_Cost_Optimization_Pillar.md"
+    - "9. Substainability Pillar": "waf/9_Substainability_Pillar.md"
+  - Practice Questions:
+    - By Exam Domain:
+      - "Design Resilient Architectures": "mcq/section-based/1_Design Resilient Architectures.md"
+      - "Design High Performing Architectures": "mcq/section-based/2_Design High_Performing Architectures.md"
+      - "Design Secure Architectures": "mcq/section-based/3_Design Secure Architectures.md"
+      - "Design Cost-Optimized Architectures": "mcq/section-based/4_Design Cost-Optimized Architectures.md"
+    - By Topic:
+      - "ec2": "mcq/topic-based/01_ec2.md"
+      - "auto scaling": "mcq/topic-based/02_auto_scaling.md"
+      - "DynamoDB": "mcq/topic-based/03_DynamoDB.md"
+      - "EBS": "mcq/topic-based/04_EBS.md"
+      - "EFS": "mcq/topic-based/05_EFS.md"
+      - "ELB": "mcq/topic-based/06_ELB.md"
+      - "IAM": "mcq/topic-based/07_IAM.md"
+      - "Lambda": "mcq/topic-based/08_Lambda.md"
+      - "RDS": "mcq/topic-based/09_RDS.md"
+      - "S3": "mcq/topic-based/10_S3.md"
+      - "SQS": "mcq/topic-based/11_SQS.md"
+      - "VPC": "mcq/topic-based/12_VPC.md"
+      - "Cloudfront": "mcq/topic-based/13_Cloudfront.md"
+    - Review Mode:
+      - "1": "mcq/review_mode/1.md"
+      - "2": "mcq/review_mode/2.md"
+      - "3": "mcq/review_mode/3.md"
+    - Mixed:
+      - "SAA MCQ": "mcq/SAA_MCQ.md"
+      - "Cost Anomaly Question": "mcq/tm/1.md"
